@@ -1,0 +1,13 @@
+import React from 'react';
+import {Route} from 'react-router-dom';
+import {shallow} from 'enzyme';
+
+import Navigator from '../navigator';
+
+// yarn test ./src/__tests__/Navigator.test.js --coverage
+describe('<Navigator />', () => {
+	it('has at least one route defined', () => {
+		expect(shallow(<Navigator/>).find(Route).length)
+			.toBeGreaterThanOrEqual(1);
+	});
+});
